@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<form action='signUp' method='POST'>
+    {% csrf_token%}
+    <table cellpadding="10" cellspacing="10" border="2" align="center">
+        {{su.as_table}}
+        <tr>
+            <td><input type='submit' value="save"></td>
+        </tr>
+    </table>
+</form>

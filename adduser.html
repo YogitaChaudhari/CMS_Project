@@ -1,0 +1,11 @@
+
+<!DOCTYPE html>
+<form action='adduser' method='POST'>
+    {% csrf_token%}
+    <table cellpadding="10" cellspacing="10" border="2" align="center">
+        {{form4.as_table}}
+        <tr>
+            <td><input type='submit' value="save"></td>
+        </tr>
+    </table>
+</form>

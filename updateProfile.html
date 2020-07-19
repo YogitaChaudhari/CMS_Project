@@ -1,0 +1,13 @@
+<head></head>
+<h1>UPDATE PAGE</h1>
+<body>
+<form action="updateProfile?email={{email}}" method="POST">
+    {% csrf_token %}
+    <table>
+        {{form5.as_table}}
+        <tr>
+            <td><input type="submit" value="Update"></td>
+        </tr> 
+
+    </table>
+</form>

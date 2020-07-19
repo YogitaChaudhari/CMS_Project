@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<form>
+    <table cellpadding="10" cellspacing="10" border="2" align="center">
+        <tr>
+            <th>complaintId</th>>
+            <th>Complaint_User</th>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>ComplaintDate</th>
+            <th>Assigned_User</th>>
+            <th>Comments</th>
+            <th>Complaint_Status</th>>
+            <th>Email</th>
+            <th colspan="2">Action</th>
+        </tr>
+            {% for cl in form3 %}
+        <tr>
+            <td>{{cl.id}}</td>
+            <td>{{cl.complaint_user}}</td>
+            <td>{{cl.subject}}</td>
+            <td>{{cl.description}}</td>
+            <td>{{cl.complaintDate}}</td>
+            <td>{{cl.assigned_user}}</td>
+            <td>{{cl.comments}}</td>
+            <td>{{cl.complaint_status}}</td>
+            <td>{{cl.email}}</td>
+            <td><a href="deleteComplaint/{{cl.id}}">Delete</a></td>
+            <td><a href="editComplaint?id={{cl.id}}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
